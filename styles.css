@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+}
+
+#danceButton {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#danceButton:hover {
+    background-color: #3700b3;
+}
+
+#emoji {
+    font-size: 100px;
+    margin-top: 20px;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes dance {
+    0% { transform: translateX(0) rotate(0deg); }
+    25% { transform: translateX(-10px) rotate(-20deg); }
+    50% { transform: translateX(10px) rotate(20deg); }
+    75% { transform: translateX(-10px) rotate(-20deg); }
+    100% { transform: translateX(0) rotate(0deg); }
+}
